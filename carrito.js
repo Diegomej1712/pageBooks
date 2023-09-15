@@ -16,24 +16,24 @@ function addProductOnCart ()
     
         productsOnCart.forEach(product => {     // se arma la estructura a mostrar de los productos del carrito
             products = products + `
-            <div class="card my-1 mx-3 d-flex flex-row align-items-center w-80">
-                <div class="card-img w-20" style="height=100px;">
-                    <img src="${product.image}" class="card-img-top p-2" alt="${product.title}">
+            <div class="card my-1 mx-3 px-3 d-flex flex-row align-items-center">
+                <div class="w-20">
+                    <img src="${product.image}" class="card-img-top p-2 w-100" alt="${product.title}">
                 </div>
                 <div class="card-body w-20">
-                    <h6 class="card-title">${product.title}</h6>
+                    <p class="card-text fontsizeSmall">${product.title}</p>
+                </div>
+                <div class="card-body w-10">
+                    <p class="card-text fontsizeSmall quantity">${product.quantity}</p>
+                </div>
+                <div class="card-body w-10">
+                    <p class="card-text fontsizeSmall price">${product.price}$</p>
                 </div>
                 <div class="card-body w-20">
-                    <h6 class="card-text quantity">${product.quantity}</h6>
+                    <p class="card-text fontsizeSmall priceTotal">Total: ${product.price * product.quantity}$</p>
                 </div>
-                <div class="card-body w-20">
-                    <h6 class="card-text price">${product.price}$</h6>
-                </div>
-                <div class="card-body w-20">
-                    <h6 class="card-text price">Total: ${product.price * product.quantity}$</h6>
-                </div>
-                <div class="card-text d-flex justify-content-center align-items-center w-20">
-                    <button class="btnDelete" id="${product.id}" style="width: 20%; height: 30px; border: none; background: none"><img src="trash-fill.svg"></button>
+                <div class="d-flex align-items-center w-20">
+                    <button class="btnDelete w-20 border-0" id="${product.id}" style="background: none"><img src="trash-fill.svg"></button>
                 </div>
             </div>
             `;

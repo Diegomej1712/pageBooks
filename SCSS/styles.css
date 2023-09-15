@@ -11429,4 +11429,10 @@ header .nav-link {
 .libraryContainer .card .card-img-top {
   width: 100%;
   height: 70%;
+}
+
+@media (max-width: 1000px) {
+  .fontsizeSmall {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -36,3 +36,10 @@ header {
         }
     }
 }
+
+@media (max-width: 1000px)
+{
+    .fontsizeSmall {
+        font-size: 10px;
+    }
+}
