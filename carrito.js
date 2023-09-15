@@ -16,23 +16,23 @@ function addProductOnCart ()
     
         productsOnCart.forEach(product => {     // se arma la estructura a mostrar de los productos del carrito
             products = products + `
-            <div class="card my-1 mx-3 d-flex flex-row align-items-center" style="width: 80%;">
-                <div class="card-img" style="width: 7%; height=100px;">
+            <div class="card my-1 mx-3 d-flex flex-row align-items-center w-80">
+                <div class="card-img w-20" style="height=100px;">
                     <img src="${product.image}" class="card-img-top p-2" alt="${product.title}">
                 </div>
-                <div class="card-body" style="width: 20%">
+                <div class="card-body w-20">
                     <h6 class="card-title">${product.title}</h6>
                 </div>
-                <div class="card-body" style="width: 20%">
+                <div class="card-body w-20">
                     <h6 class="card-text quantity">${product.quantity}</h6>
                 </div>
-                <div class="card-body" style="width: 20%">
+                <div class="card-body w-20">
                     <h6 class="card-text price">${product.price}$</h6>
                 </div>
-                <div class="card-body" style="width: 20%">
+                <div class="card-body w-20">
                     <h6 class="card-text price">Total: ${product.price * product.quantity}$</h6>
                 </div>
-                <div class="card-text d-flex justify-content-center align-items-center" style="width: 20%">
+                <div class="card-text d-flex justify-content-center align-items-center w-20">
                     <button class="btnDelete" id="${product.id}" style="width: 20%; height: 30px; border: none; background: none"><img src="trash-fill.svg"></button>
                 </div>
             </div>
