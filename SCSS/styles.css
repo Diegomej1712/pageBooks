@@ -11428,7 +11428,11 @@ header .nav-link {
 }
 .libraryContainer .card .card-img-top {
   width: 100%;
-  height: 70%;
+  height: 50%;
+}
+.libraryContainer .card .card-body {
+  width: 100%;
+  height: 50%;
 }
 
 @media (max-width: 1000px) {

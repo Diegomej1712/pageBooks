@@ -12,12 +12,13 @@ async function getApi()
         let books = ''; // arreglo para la estructura de cada libro en el html
         let standBooks = []; // arreglo para los libros que da la api
         data.items.forEach((book) => {
+            const firstAuthor = book.volumeInfo.authors ? book.volumeInfo.authors[0] : 'Autor Desconocido';
             books = books + `
-            <div class="card col-md-3 my-3 mx-3" style="width: 18rem;">
+            <div class="card col-md-3 my-3 mx-3" style="width: 14rem;">
                 <img src="${book.volumeInfo.imageLinks.smallThumbnail}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">${book.volumeInfo.title}</h5>
-                    <h6 class="card-text">${book.volumeInfo.authors}</h6>
+                <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                    <h6 class="card-title">${book.volumeInfo.title}</h6>
+                    <p class="card-text fontsizeSmall">${firstAuthor}</p>
                     <h6 class="card-text price">${book.volumeInfo.pageCount}$</h6>
                     <a href="#" class="btn btn-primary addToCart" id="${book.id}">Agregar a carrito</a>
                 </div>
